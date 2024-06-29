@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+
+    <style>
+        
+
+        .bg-banner {
+            height: 100vh;
+            background-size: cover;
+            /* background-size: 100% auto; */
+            background-position: center;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            background-image: url("../public/images/netflix-banner.jpg");
+        }
+
+        .bg-shade {
+            height: 100vh;
+            background-color: rgba(0, 0, 0, 0.6);
+        }
+
+        .brand-title {
+            color: red;
+            font-size: 4vw;
+            font-weight: bold;
+            font-family: Arial;
+        }
+
+        section {
+            padding-top: 130px;
+        }
+
+        .main-title {
+            overflow: hidden;
+            font-size: 4rem;
+            font-weight: bold;
+            font-family: Arial;
+            margin-bottom: 20px;
+            align-items: center;
+            text-align: center;
+        }
+
+        .main-subtitle {
+            overflow: hidden;
+            font-size: 2rem;
+            font-family: Arial;
+            align-items: center;
+            text-align: center;
+        }
+
+        .reg {
+            display: flex;
+            overflow: hidden;
+            justify-content: center;
+        }
+
+        .int {
+            width: 30%;
+        }
+    </style>
+
+    <script src="../node_modules/react/umd/react.development.js"></script>
+    <script src="../node_modules/react-dom/umd/react-dom.development.js"></script>
+    <script src="../node_modules/@babel/standalone/babel.js"></script>
+    <script type="text/babel">
+
+
+        function NetflixIndex() {
+            return (
+                <div className="bg-banner">
+                    <div className="bg-shade">
+                        <NetflixHeader />
+                        <section className="text-white text-center" />
+                        <NetflixMain />
+                        <NetflixRegister />
+                    </div>
+                </div>
+            )
+        }
+
+        function NetflixHeader() {
+            return (
+                <header className="d-flex justify-content-between p-3">
+                    <div>
+                        <span className="brand-title">NETFLIX</span>
+                    </div>
+                    <div>
+                        <div className="input-group">
+                            <span className="bi bi-translate input-group-text"></span>
+                            <select className="form-select">
+                                <option>Language</option>
+                            </select>
+                            <button className="btn btn-danger ms-4">SignIn</button>
+                        </div>
+                    </div>
+                </header>
+            )
+        }
+
+        function NetflixMain() {
+            return (
+                <main>
+                    <div className="d-flex justify-content-center">
+                        <div>
+                            <div className="main-title text-white">
+                                Unlimited movies, TV shows and more
+                            </div>
+                            <div className="main-subtitle text-white">
+                                Watch anywhere. Cancel anytime.
+                            </div>
+                        </div>
+                    </div>
+                </main>
+            )
+        }
+
+        function NetflixRegister() {
+            return (
+                <form>
+                    <div>
+                        <p className="text-white text-center p-2">
+                            Ready to watch? Enter your email to create or restart your membership.
+                        </p>
+                    </div>
+                    <div className="reg">
+                        <input type="email" class="int form-control " placeholder="Enter your email" />
+                        <button type="submit" class="btn btn-danger ms-2">Get Started <span className="bi bi-chevron-right"></span></button>
+                    </div>
+                </form>
+            )
+        }
+
+
+        ReactDOM.render(<NetflixIndex />, document.getElementById("root"));
+    </script>
+
+</head>
+
+<body>
+    <div id="root"> </div>
+</body>
+
+</html>

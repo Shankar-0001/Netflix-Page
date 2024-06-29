@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <style>
+        .container {
+            width: 400px;
+            padding: 20px;
+            border-radius: 5px;
+            border: 2px solid black;
+            box-shadow: 2px 2px 2px gray;
+        }
+    </style>
+    <script src="../node_modules/react/umd/react.development.js"></script>
+    <script src="../node_modules/react-dom/umd/react-dom.development.js"></script>
+    <script src="../node_modules/@babel/standalone/babel.js"></script>
+
+    <script type="text/babel">
+        function Srcbr() {
+            return (
+                <div align="center" className="container">
+                    <input type="text" placeholder="fuch..!" />
+                    <button>search</button>
+                </div>
+            )
+        }
+        ReactDOM.render(<div> <Srcbr></Srcbr> <br/> <Srcbr/></div>, document.getElementById("root"));
+    </script>
+</head>
+
+<body>
+    <div id="root"></div>
+</body>
+
+</html>

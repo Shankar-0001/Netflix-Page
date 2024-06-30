@@ -1,1 +1,2 @@
 ### Netflix Page
+### Technologies used
